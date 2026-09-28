@@ -1,0 +1,167 @@
+<Window x:Class="StudentRegistrationApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Student Registration"
+        Height="720"
+        Width="1000"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
+    <Grid Margin="30">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- FORM -->
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+
+                <TextBlock Text="STUDENT REGISTRATION"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20"/>
+
+                <TextBlock Text="NIM"/>
+
+                <TextBox x:Name="txtNim"
+                         Height="35"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,0,15"/>
+
+                <TextBlock Text="Nama Mahasiswa"/>
+
+                <TextBox x:Name="txtNama"
+                         Height="35"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,0,15"/>
+
+                <TextBlock Text="Program Studi"/>
+
+                <ComboBox x:Name="cmbProdi"
+                          Height="35"
+                          VerticalContentAlignment="Center"
+                          Margin="0,5,0,15">
+
+                    <ComboBoxItem Content="Teknik Informatika"/>
+                    <ComboBoxItem Content="Sistem Informasi"/>
+                    <ComboBoxItem Content="Manajemen"/>
+                    <ComboBoxItem Content="Akuntansi"/>
+
+                </ComboBox>
+
+                <TextBlock Text="Jenis Kelamin"/>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="0,5,0,15">
+
+                    <RadioButton x:Name="rbLaki"
+                                 Content="Laki-laki"
+                                 Margin="0,0,20,0"/>
+
+                    <RadioButton x:Name="rbPerempuan"
+                                 Content="Perempuan"/>
+
+                </StackPanel>
+
+                <!-- Step 12 Level 1: Tanggal lahir, alamat, nomor telepon -->
+                <TextBlock Text="Tanggal Lahir"/>
+
+                <DatePicker x:Name="dpTanggalLahir"
+                            Height="35"
+                            VerticalContentAlignment="Center"
+                            Margin="0,5,0,15"/>
+
+                <TextBlock Text="Alamat"/>
+
+                <TextBox x:Name="txtAlamat"
+                         Height="60"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"
+                         Margin="0,5,0,15"/>
+
+                <TextBlock Text="Nomor Telepon"/>
+
+                <TextBox x:Name="txtTelepon"
+                         Height="35"
+                         VerticalContentAlignment="Center"
+                         Margin="0,5,0,15"/>
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Button x:Name="btnSimpan"
+                            Content="Simpan"
+                            Width="120"
+                            Height="40"
+                            Margin="0,0,10,0"
+                            Click="BtnSimpan_Click"/>
+
+                    <Button Content="Reset"
+                            Width="120"
+                            Height="40"
+                            Click="BtnReset_Click"/>
+
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- DATA -->
+        <DockPanel Grid.Column="2">
+
+            <TextBlock DockPanel.Dock="Top"
+                       Text="DATA MAHASISWA"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Margin="0,0,0,20"/>
+
+            <!-- Step 12 Level 2: Search mahasiswa -->
+            <TextBlock DockPanel.Dock="Top" Text="Cari (NIM / Nama / Prodi)"/>
+
+            <TextBox x:Name="txtSearch"
+                     DockPanel.Dock="Top"
+                     Height="35"
+                     VerticalContentAlignment="Center"
+                     Margin="0,5,0,15"
+                     TextChanged="TxtSearch_TextChanged"/>
+
+            <TextBlock x:Name="txtStatusDb"
+                       DockPanel.Dock="Bottom"
+                       Foreground="Gray"
+                       Margin="0,10,0,0"/>
+
+            <StackPanel DockPanel.Dock="Bottom"
+                        Orientation="Horizontal"
+                        Margin="0,10,0,0">
+
+                <Button Content="Edit"
+                        Width="120"
+                        Height="40"
+                        Margin="0,0,10,0"
+                        Click="BtnEdit_Click"/>
+
+                <Button Content="Hapus"
+                        Width="120"
+                        Height="40"
+                        Click="BtnHapus_Click"/>
+
+            </StackPanel>
+
+            <!-- Step 12 Level 2: Counter jumlah mahasiswa -->
+            <TextBlock x:Name="txtJumlah"
+                       DockPanel.Dock="Bottom"
+                       Text="Jumlah Mahasiswa: 0"
+                       FontWeight="Bold"
+                       Margin="0,10,0,0"/>
+
+            <ListBox x:Name="lstMahasiswa"
+                     MouseDoubleClick="LstMahasiswa_MouseDoubleClick"/>
+
+        </DockPanel>
+
+    </Grid>
+
+</Window>
