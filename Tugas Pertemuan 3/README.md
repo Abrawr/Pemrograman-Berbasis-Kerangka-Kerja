@@ -66,6 +66,8 @@ Sesuai dengan kenyamanan pengguna (phone/dialpad order dimulai dari kiri atas), 
 ---
 
 ## BAB III. ARSITEKTUR DAN STRUKTUR KODE PROGRAM
+<img width="1368" height="770" alt="image" src="https://github.com/user-attachments/assets/2b4deb53-6703-4ae9-9cf3-50efdfb86a61" />
+<img width="1362" height="755" alt="image" src="https://github.com/user-attachments/assets/a0b6979d-ed43-45ed-8ea3-a73cbb92d6b1" />
 
 ### 3.1 Implementasi Kode Sumber
 
