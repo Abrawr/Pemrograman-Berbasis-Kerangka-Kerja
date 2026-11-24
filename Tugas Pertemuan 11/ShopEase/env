@@ -1,0 +1,18 @@
+# Salin file ini menjadi .env sebelum menjalankan aplikasi
+CI_ENVIRONMENT = development
+
+app.baseURL = 'http://localhost:8080/'
+app.indexPage = ''
+
+# Mode SQLite3 (jalan langsung tanpa server MySQL):
+database.default.DBDriver = SQLite3
+database.default.database = shopease_p11.sqlite
+database.default.foreignKeys = true
+
+# Mode MySQLi (gunakan bersama Tugas Pertemuan 11/Database/db_shopease.sql):
+# database.default.hostname = localhost
+# database.default.database = db_shopease
+# database.default.username = root
+# database.default.password =
+# database.default.DBDriver = MySQLi
+# database.default.port = 3306

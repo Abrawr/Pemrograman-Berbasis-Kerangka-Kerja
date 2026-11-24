@@ -1,0 +1,18 @@
+# Salin file ini menjadi .env sebelum menjalankan aplikasi
+CI_ENVIRONMENT = development
+
+app.baseURL = 'http://localhost:8080/'
+app.indexPage = ''
+
+# Mode SQLite3 (jalan langsung tanpa server MySQL):
+database.default.DBDriver = SQLite3
+database.default.database = tokoonline.sqlite
+database.default.foreignKeys = true
+
+# Mode MySQLi (gunakan bersama Tugas Pertemuan 9/Database/db_tokoonline.sql):
+# database.default.hostname = localhost
+# database.default.database = db_tokoonline
+# database.default.username = root
+# database.default.password =
+# database.default.DBDriver = MySQLi
+# database.default.port = 3306

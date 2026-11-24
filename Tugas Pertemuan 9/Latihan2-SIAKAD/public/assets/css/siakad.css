@@ -1,0 +1,81 @@
+:root {
+  --siakad-slate: #0F3557;
+  --siakad-teal: #0D9488;
+  --siakad-teal-hover: #0F766E;
+  --siakad-ground: #F5F7FA;
+  --siakad-surface: #FFFFFF;
+  --siakad-border: #DDE3EC;
+  --siakad-ink: #0F172A;
+  --siakad-muted: #475569;
+}
+
+::selection {
+  background: rgba(13, 148, 136, 0.16);
+  color: var(--siakad-ink);
+}
+
+body {
+  background-color: var(--siakad-ground);
+  color: var(--siakad-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.siakad-nav {
+  background-color: var(--siakad-slate);
+}
+
+.siakad-nav .nav-link {
+  color: #CBD5E1;
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+}
+
+.siakad-nav .nav-link:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.siakad-nav .nav-link.active {
+  color: #FFFFFF;
+  background-color: var(--siakad-teal);
+}
+
+.surface-card {
+  background-color: var(--siakad-surface);
+  border: 1px solid var(--siakad-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.btn-teal {
+  background-color: var(--siakad-teal);
+  border-color: var(--siakad-teal);
+  color: #FFFFFF;
+}
+
+.btn-teal:hover,
+.btn-teal:focus-visible {
+  background-color: var(--siakad-teal-hover);
+  border-color: var(--siakad-teal-hover);
+  color: #FFFFFF;
+}
+
+.table thead th {
+  background-color: #F8FAFC;
+  color: var(--siakad-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--siakad-border);
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--siakad-teal);
+  box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.2);
+}

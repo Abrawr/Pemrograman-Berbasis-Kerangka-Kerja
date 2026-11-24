@@ -1,0 +1,164 @@
+:root {
+  --sb-navy: #1B2A4A;
+  --sb-navy-deep: #13203A;
+  --sb-ground: #F7F8FA;
+  --sb-surface: #FFFFFF;
+  --sb-border: #E2E8F0;
+  --sb-ink: #0F172A;
+  --sb-muted: #475569;
+  --sb-accent: #2563EB;
+  --sb-accent-hover: #1D4ED8;
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.16);
+  color: var(--sb-ink);
+}
+
+body {
+  background-color: var(--sb-ground);
+  color: var(--sb-ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+.app-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background-color: var(--sb-navy);
+  color: #E2E8F0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-brand {
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.app-brand-title {
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  text-decoration: none;
+}
+
+.app-nav-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94A3B8;
+  padding: 1rem 1.25rem 0.375rem;
+}
+
+.app-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 1.25rem;
+  color: #CBD5E1;
+  text-decoration: none;
+  font-size: 0.925rem;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 0.125rem 0.75rem;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.app-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+}
+
+.app-nav-link.active {
+  background-color: var(--sb-accent);
+  color: #FFFFFF;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-topbar {
+  background-color: var(--sb-surface);
+  border-bottom: 1px solid var(--sb-border);
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.app-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.surface-card {
+  background-color: var(--sb-surface);
+  border: 1px solid var(--sb-border);
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.btn-primary {
+  background-color: var(--sb-accent);
+  border-color: var(--sb-accent);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background-color: var(--sb-accent-hover);
+  border-color: var(--sb-accent-hover);
+}
+
+.form-control:focus,
+.form-select:focus,
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.22);
+  border-color: var(--sb-accent);
+}
+
+.table thead th {
+  background-color: #F8FAFC;
+  color: var(--sb-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  border-bottom: 1px solid var(--sb-border);
+}
+
+.app-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--sb-border);
+  background-color: var(--sb-surface);
+  color: var(--sb-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 991.98px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .app-sidebar {
+    width: 100%;
+  }
+}
